@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Duvicii Yachts — Private yacht experiences on the Gulf Coast. Charter or list a vessel with us.">
+<meta name="theme-color" content="#1C1C1E">
+
+<title>Duvicii Yachts — Private Yacht Experiences</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --ivory: #FAFAF8;
+  --charcoal: #1C1C1E;
+  --gold: #D6B15E;
+}
+
+/* BASE */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: 'Inter', sans-serif;
+  background: var(--charcoal);
+  color: var(--ivory);
+  line-height: 1.5;
+}
+
+/* PAGE */
+.page {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* SKIP LINK */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 10px;
+  background: #fff;
+  color: #000;
+  padding: 10px 14px;
+  border-radius: 4px;
+  z-index: 9999;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  left: 10px;
+}
+
+/* FOCUS */
+:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* HEADER */
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: clamp(14px, 3vw, 28px) clamp(20px, 6vw, 60px);
+}
+
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ivory);
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+/* BACKGROUND (DECORATIVE) */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(28,28,30,0.55),
+      rgba(28,28,30,0.25),
+      rgba(28,28,30,0.75)
+    ),
+    url('https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=1800&q=85&fit=crop')
+    center / cover no-repeat;
+  z-index: 1;
+}
+
+/* CONTENT */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+
+  padding: clamp(16px, 3.5vw, 40px);
+  background: rgba(20,20,22,0.80);
+  backdrop-filter: blur(8px);
+
+  max-width: 620px;
+  width: min(620px, 90vw);
+
+  border: 1px solid rgba(214,177,94,0.35);
+}
+
+/* TYPOGRAPHY */
+.hero-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.hero-headline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(40px, 7vw, 96px);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.hero-sub {
+  font-size: clamp(13px, 1.4vw, 15px);
+  line-height: 1.6;
+  opacity: 0.95;
+  margin-bottom: 24px;
+}
+
+/* BUTTON */
+.btn-primary {
+  background: var(--gold);
+  color: #1C1C1E;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  padding: 14px 36px;
+  border: none;
+  border-radius: 2px;
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+.btn-primary:disabled {
+  opacity: 0.75;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 12px 0;
+  font-size: 13px;
+  opacity: 1;
+  background: rgba(0,0,0,0.25);
+}
+
+/* REDUCED MOTION */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+}
+
+/* PERFORMANCE */
+img, picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* REMOVE FOCUS FOR MOUSE USERS */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<header>
+  <nav aria-label="Primary navigation">
+    <a href="#" class="nav-logo">Duvicii Yachts</a>
+  </nav>
+</header>
+
+<main id="main-content" class="hero" tabindex="-1">
+
+  <div class="hero-bg" aria-hidden="true"></div>
+
+  <section class="hero-content" aria-labelledby="hero-title">
+    <p class="hero-eyebrow">Calm · Clean · Crafted</p>
+
+    <h1 id="hero-title" class="hero-headline">
+      Private Yacht<br><em>Experiences</em>
+    </h1>
+
+    <p class="hero-sub">
+      Duvicii Yachts is currently building its fleet and client network on the Gulf Coast.
+      Whether you're looking to charter a private yacht or you own a vessel and want to
+      list it, we'd love to hear from you.
+    </p>
+
+    <button class="btn-primary" type="button" disabled>
+      Coming Soon
+    </button>
+
+  </section>
+
+</main>
+
+<footer>
+  Duvicii Yachts · June 2026 · inquiries@duviciiyachts.com
+</footer>
+
+</div>
+
+</body>
+</html>
